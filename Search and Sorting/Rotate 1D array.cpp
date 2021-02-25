@@ -1,10 +1,18 @@
 void rotate(int *input, int d, int n)
 {
     int t[d];
-    for(int i=0; i<d; i++)
-        t[i]=input[i];
-    for(int j=d, k=0; j<n; k++, j++)
-        input[k]=input[j];
-    for(int l=n-d, m=0; l<n; l++, m++)
+    int m=0;
+    for(int i=d; i<n; i++){
+        t[m]=input[i];
+       m++;}
+      
+    for(int j=0 j<d;j++){
+
+        t[m]=input[j];
+       m++; 
+}
+       m=0;
+    for(int l=0; l<n; l++)
         input[l]=t[m];
+           m++;
 }
